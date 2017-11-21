@@ -1,0 +1,91 @@
+.button-nav{
+  display: none;
+
+  &--close{
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    width: 23px;
+    height: 4px;
+
+    border: none;
+    outline: none;
+    background-color: #81b3d2;
+
+    cursor: pointer;
+  }
+
+  &--close::before{
+    position: absolute;
+    top: -9px;
+    right: 0px;
+    content: "";
+    width: 23px;
+    height: 4px;
+
+    background-color: #81b3d2;
+
+    cursor: pointer;
+  }
+
+  &--close::after{
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    content: "";
+    width: 23px;
+    height: 4px;
+
+    background-color: #81b3d2;
+
+    cursor: pointer;
+  }
+
+  &--open{
+    display: table;
+    position: absolute;
+    top: 13px;
+    left: 274px;
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    cursor: pointer;
+  }
+
+  &--open::before{
+    position: absolute;
+    top: 13px;
+    right: 2px;
+    content: "";
+    width: 27px;
+    height: 4px;
+
+    background-color: #ffffff;
+
+    transform: rotate(45deg);
+  }
+
+  &--open::after{
+    position: absolute;
+    top: 13px;
+    right: 2px;
+    content: "";
+    width: 27px;
+    height: 4px;
+
+    background-color: #ffffff;
+
+    transform: rotate(-45deg);
+  }
+}
+
+@media(min-width: 768px){
+  .button-nav{
+    display: none;
+  }
+}

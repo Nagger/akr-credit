@@ -1,0 +1,30 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    min-width: 320px;  
+    font-size: 14px;
+  }
+  
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+.clearfix::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0; 
+    @media @tablet-widths {
+        width: 768px;            
+    }
+    @media @desktop-widths {
+        width: 940px;            
+    }
+    
+}
