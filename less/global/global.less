@@ -1,14 +1,21 @@
-body{
+body {
     margin: 0 auto;
     padding: 0;
     min-width: 320px;  
-    font-size: 14px;
+    font-size: 15px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    line-height: 20px;
+    color:#506067;
   }
   
-  img{
+img {
     width: 100%;
     height: auto;
   }
+
+a {
+    color:#506067;
+}
 
 .clearfix::after {
     content:"";
@@ -17,11 +24,11 @@ body{
 }
 
 .container {
-    width: 320px;
+    width: 300px;
     margin: 0 auto;
-    padding: 0; 
+    padding: 0 10px; 
     @media @tablet-widths {
-        width: 768px;            
+        width: 738px;            
     }
     @media @desktop-widths {
         width: 940px;            

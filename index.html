@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorbox.css">
     <title>Агентство Кредитных Решений</title>
 </head>
 <body>
+    <svg style="display: none">
+        <symbol viewBox="0 0 22.199 22.199" id="icon-nav-close">
+            <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+        </symbol>
+        <symbol viewBox="0 0 22.928 21.982" id="icon-nav-burger">
+            <rect width="22.928" height="3.964"/>
+            <rect y="9.009" width="22.928" height="3.964"/>
+            <rect y="18.018" width="22.928" height="3.964"/>
+        </symbol>
+    </svg>    
     <header class="page-header container clearfix">        
             <a href="" class="page-header__logo">+7 (495) 909-39-30</a>
-            <nav class="nav">
+            <nav class="nav nav--closed">
                 <ul class="nav__list">
                     <li class="nav__item">Главная</li>
                     <li class="nav__item"><a href="career.php">Карьера</a></li>
                     <li class="nav__item"><a href="contacts.php">Контакты</a></li>
                     <li class="nav__item"><a href="props.php">Реквизиты</a></li>
                 </ul>
-            </nav>        
+            </nav>     
+            <button class="nav__toggler" type="button">
+                <svg width="21" height="21" fill="#81b3d2">
+                   <use xlink:href="#icon-nav-burger"></use>
+                </svg>
+            </button>  
     </header>
     <main class="page-main">
         <section class="promo container clearfix">            
@@ -25,7 +41,7 @@
             <div class="promo__block">
                 <div class="promo__title">Агентство кредитных решений</div>
                 <div class="promo__text">Мы готовы идти навстречу нашим клиентам, которые оказались в затруднительной финансовой ситуации и не могут оплачивать долг в соответствии с графиком платежей.</div>
-                <button class="promo__send"></button>
+                <a href="http://www.akr-credit.ru/form_contact.php" class="promo__send colorboxForm"><strong>Написать</strong> нам</a>                
             </div>
         </section>
         <section class="notpay">
@@ -35,21 +51,12 @@
                 </h2>
                 <div class="notpay__list">
                     <ul>
-                        <li>
-                            Сумма задолженности будет расти.
-                        </li>            
-                        <li>
-                            Вам придется также оплачивать госпошлины и издержки на судебный процесс. Если нам не удастся договориться, Агентство кредитных решений передаст Ваше дело в суд.
-                        </li>
-                        <li>
-                            Если у вас долг по кредиту, Ваши шансы на получение нового кредита минимальны.
-                        </li>
-                        <li>
-                            Ваше имущество и денежные средства на банковских счетах будут арестованы судебными приставами. С момента поступления в суд вашего дела ваше имущество и денежные средства будут арестованы в целях обеспечения иска, а в дальнейшем - в целях возврата задолженности. Вы можете лишиться своего имущества.
-                        </li>
-                        <li>
-                            Вы не сможете выехать за границу. У вас могут возникнуть серьезные трудности с пересечением границы РФ, а также с получением загранпаспорта и въездных виз во многие страны мира в соответствии со ст. 15 Федерального закона «О порядке выезда из Российской Федерации и въезда в Российскую Федерацию».
-                        </li>
+                            <li><strong>Сумма задолженности будет расти.</strong></li>
+                            <li><strong>Вам придется также оплачивать госпошлины и издержки на судебный процесс</strong>. Если нам не удастся договориться, Агентство кредитных решений передаст Ваше дело в суд.</li>
+        
+                            <li><strong>Если у вас долг по кредиту, Ваши шансы на получение нового кредита минимальны.</strong></li>
+                            <li><strong>Ваше имущество и денежные средства на банковских счетах будут арестованы судебными приставами.</strong> С момента поступления в суд вашего дела ваше имущество и денежные средства будут арестованы в целях обеспечения иска, а в дальнейшем - в целях возврата задолженности. Вы можете лишиться своего имущества. </li>
+                            <li><strong>Вы не сможете выехать за границу.</strong> У вас могут возникнуть серьезные трудности с пересечением границы РФ, а также с получением загранпаспорта и въездных виз во многие страны мира в соответствии со ст. 15 Федерального закона «О порядке выезда из Российской Федерации и въезда в Российскую Федерацию».</li>
                     </ul>
                 </div>
             </div>
@@ -80,12 +87,12 @@
     <footer class="page-footer">
         <div class="container">
             <div class="page-footer__menu-block">
-                <!-- <ul class="page-footer__menu-list">
-                    <li>Главная</li>
-                    <li>Карьера</li>
-                    <li>Реквизиты</li>
-                    <li>Контакты</li>
-                </ul> -->
+                <ul class="page-footer__menu-list">
+                    <li class="nav__item">Главная</li>
+                    <li class="nav__item"><a href="career.php">Карьера</a></li>
+                    <li class="nav__item"><a href="contacts.php">Контакты</a></li>
+                    <li class="nav__item"><a href="props.php">Реквизиты</a></li>
+                </ul>
             </div>
 
             <div class="page-footer__copy">
@@ -93,5 +100,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery/jquery.min.js"></script>        
+    <script src="js/jquery/jquery.colorbox.min.js"></script>          
+    <script src="js/script.js"></script>
 </body>
 </html>

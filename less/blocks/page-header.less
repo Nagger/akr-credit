@@ -1,8 +1,36 @@
 .page-header {
-    min-height:63px;
-    margin-bottom:40px;
+    min-height:40px;    
+    position:relative;    
+    padding-top: 10px;
 }
-.page-header__logo {
-    float:left;
-    width: 300px;    
+.page-header__logo {    
+    width: 300px;
+    float:left;    
+    color: #c9482b;
+    font-weight: bold;
+    text-decoration:none;
+    font-size: 18px;    
+    text-align: center;
 }
+@media @tablet-widths {
+    .page-header {
+        min-height:42px;
+        margin-bottom:40px;             
+        padding-top:22px;        
+    }   
+    .page-header::after {
+        content: "";
+        border-bottom: 1px solid #d6d6d6;
+        width: 100%;
+        display: block;
+        padding-top: 21px;     
+    }
+    .page-header__logo {
+        font-size: 19px;
+        text-align: left;
+    }
+}
+@media @desktop-widths {
+    
+}
+

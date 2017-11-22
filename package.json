@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "cwebp": "^2.0.2",
+    "jquery-colorbox": "^1.6.4",
     "normalize.css": "^7.0.0"
   }
 }
