@@ -34,35 +34,43 @@ $(document).ready(function() {
         opacity: 0.7,
 		scrolling: false,
 		closeButton: true,
-		fixed: true,
-        width: "815px",
-        height: "680px",
+        fixed: true,
+        width: '95%',
+        height: '95%',
+        maxWidth: "815px",
+        maxHeight: "680px",
         close: "X",
     });
     // Отправить данные формы
     $('#send-message').click(function(event){
-                // собираем данные с формы
-                var first_name   = $('#first_name').val();
-                var email   = $('#email').val();
-                var phone   = $('#phone').val();
-                var comment = $('#comment').val();
+        // собираем данные с формы
+        var first_name   = $('#first_name').val();
+        var email   = $('#email').val();
+        var phone   = $('#phone').val();
+        var comment = $('#comment').val();
 
-                // отправляем данные
-                $.ajax({
-                    url: "action_send.php", // куда отправляем
-                    type: "post", // метод передачи
-                    dataType: "json", // тип передачи данных
-                    data: { // что отправляем
-                        "first_name":    first_name,
-                        "email":   email,
-                        "phone":   phone,
-                        "comment": comment
-                    },
-                    // после получения ответа сервера
-                    success: function(data){
-                        $('.messages').html(data.result); // выводим ответ сервера
-                        //$('.data-form').hide();                          
-                    }
-                });
-            });
+        // отправляем данные
+        $.ajax({
+            url: "action_send.php", // куда отправляем
+            type: "post", // метод передачи
+            dataType: "json", // тип передачи данных
+            data: { // что отправляем
+                "first_name":    first_name,
+                "email":   email,
+                "phone":   phone,
+                "comment": comment
+            },
+            // после получения ответа сервера
+            success: function(data){
+                $('.messages').html(data.result); // выводим ответ сервера
+                //$('.data-form').hide();                          
+            }
+        });
+    });
+    // $(window).resize(function(){
+    //     $.colorbox.resize({
+    //         width: window.innerWidth > parseInt(cboxOptions.maxWidth) ? cboxOptions.maxWidth : cboxOptions.width,
+    //         height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
+    //     });
+    // });
 });
